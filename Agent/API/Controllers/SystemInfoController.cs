@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore;
 namespace API.Controllers
 {
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("agent/[controller]")]
     public class SystemInfoController : ControllerBase
     {
         private readonly DataContext context;
@@ -18,7 +18,7 @@ namespace API.Controllers
         {
             context = _context;
         }
-        
+
         [HttpGet]
         public async Task<ActionResult<IEnumerable<SystemInfo>>> GetSystemInfos()
         {
